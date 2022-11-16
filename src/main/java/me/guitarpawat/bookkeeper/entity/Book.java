@@ -4,14 +4,11 @@ import com.mongodb.lang.NonNull;
 import lombok.Data;
 import me.guitarpawat.bookkeeper.enums.BookStatus;
 import me.guitarpawat.bookkeeper.enums.BookType;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 @Document("books")

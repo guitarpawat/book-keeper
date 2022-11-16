@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface BookService {
     Book getBook(String id);
+
     List<Book> listBookByType(String status, int top, String fromId);
+
     AddBookResponse upsertBook(Book book, BookUpsertMode mode);
 }
