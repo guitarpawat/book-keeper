@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --primary-dark-color: #283618;
+    --primary-light-color: #A3B18A;
+    --secondary-dark-color: #A85C19;
+    --secondary-light-color: #DDA15E;
+    --dark-color: #232323;
+    --light-color: #FFFFFF;
+    --action-color: #1D3557;
+    --danger-color: #E63946;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jomjuree', sans-serif;
+    line-height: 1;
+}
+
+p, strong, b, em, i, h4 {
+    font-size: 1rem;
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+em, i {
+    font-style: italic;
+}
+
+h4, h3, h2, h1 {
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
