@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello Spring Thymeleaf</title>
+    <title>Home | Book Keeper</title>
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/mobile.css" rel="stylesheet">
 </head>
 <body>
-<img alt="My Bookshelf logo" src="/img/logo.svg">
-<p th:text="${'Hello ' + name + '!'}">haha</p>
+<header th:replace="fragments/header.html"></header>
+<!--<p th:text="${'Hello ' + name + '!'}">haha</p>-->
+<div class="container">
+    <div class="search">
+        <h2 class="ft-secondary-dark">Search</h2>
+        <form  action="/search/result" method="get">
+            <input type="text" name="query" class="input-text" id="query" placeholder="Type something...">
+            <div class="flex-spacer-75"></div>
+            <input type="submit" class="btn-primary" value="Search by Book Name / ISBN">
+        </form>
+        <p class="ft-primary-dark text-center"><a href="/search">More search filters &gt;</a></p>
+    </div>
+
+    <div class="readings">
+        <h2 class="ft-secondary-dark">Readings</h2>
+    </div>
+</div>
 </body>
 </html>

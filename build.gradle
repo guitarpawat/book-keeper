@@ -21,6 +21,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'
     implementation group: 'jakarta.validation', name: 'jakarta.validation-api'
     implementation group: 'org.hibernate.validator', name: 'hibernate-validator'
     implementation group: 'org.slf4j', name: 'slf4j-api'

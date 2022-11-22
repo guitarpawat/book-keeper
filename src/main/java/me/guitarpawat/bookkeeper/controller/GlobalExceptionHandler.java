@@ -19,7 +19,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<ErrorModel> handleResponseStatus(ResponseStatusException rex) {
         ErrorModel errorRes = new ErrorModel(rex.getRawStatusCode(), rex.getReason());
-        log.error("ResponseStatusException occurred", rex);
+        log.error("handleResponseStatus", rex);
         return ResponseEntity.status(rex.getStatus()).body(errorRes);
     }
 
@@ -30,14 +30,14 @@ public class GlobalExceptionHandler {
     })
     public ResponseEntity<ErrorModel> handleBadRequest(Exception bex) {
         ErrorModel errorRes = new ErrorModel(HttpStatus.BAD_REQUEST.value(), bex.getMessage());
-        log.error("ServletRequestBindingException occurred", bex);
+        log.error("handleBadRequest", bex);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorRes);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorModel> handleException(Exception ex) {
         ErrorModel errorRes = new ErrorModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Something went wrong");
-        log.error("Exception occurred", ex);
+        log.error("handleException", ex);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorRes);
     }
 
