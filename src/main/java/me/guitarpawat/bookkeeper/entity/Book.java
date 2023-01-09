@@ -2,6 +2,7 @@ package me.guitarpawat.bookkeeper.entity;
 
 import com.mongodb.lang.NonNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import me.guitarpawat.bookkeeper.enums.BookStatus;
 import me.guitarpawat.bookkeeper.enums.BookType;
 import org.springframework.data.annotation.Id;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Document("books")
 @Data
+@NoArgsConstructor
 public class Book {
 
     @Id
